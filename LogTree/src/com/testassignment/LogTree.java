@@ -50,7 +50,7 @@ public class LogTree {
         // use the trusted root if provided externally, otherwise the one
         // calculated here is used
         if (args.length == 3) {
-            trustedRoot = args[2].getBytes(UTF8_CHARSET);
+            trustedRoot = DatatypeConverter.parseHexBinary(args[2]);
         } else {
             trustedRoot = rootNode.getValue();
         }
